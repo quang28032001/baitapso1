@@ -1,36 +1,54 @@
 #include <iostream>
 #include<math.h>
 using namespace std;
-int i,j,n,k,h,m,y;
-int d=1;
-int so[10000000];
+
+float a[30][30];
+float b[30][30];
+
+float d;
 int main()
 {
-    cin>>y;
-cin>>n;
-   for (int i=1;i<=n;)
+   int x,y,m,n;
+   cin>>x>>y;
+
+int i,j,h,k,p,q,l;
+    for(i=0;i<x;)
     {
-
-        d++;
-        int k=0;
-        for(j=0;j<=d;)
+        for(j=0;j<y;)
         {
+            cin>>a[i][j];
             j++;
-            if(d%j==0) k=k+1;
         }
-        if(k==2)
-        {so[i]=d;
-
-            m=so[i];
-            for(;m>0;)
-            {
-                if(m%10==y){ h=h+1; break;}
-                m=m/10;
-            }
-            i++;}
-
-
+        i++;
     }
-cout<<h;
+    cin>>m>>n;
+
+    for(p=0;p<m;)
+    {
+        for(q=0;q<n;)
+        {
+            cin>>b[p][q];
+            q++;
+        }
+        p++;
+    }
+
+    for(h=0;h<x;)
+    {
+        for(k=0;k<y;)
+        {
+
+          for(l=0;l<=y;)
+          {
+              d=d+a[h][l]*b[l][k];
+              l++;
+          }
+          cout<<d<<" ";
+          k++;
+        }
+        cout<<endl;
+        h++;
+    }
+
     return 0;
 }
