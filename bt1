@@ -15,9 +15,7 @@ int main()
     s=(int)s;
 
     cout<<s/100;
-int bb;
-cout<< cc
-cout<< ab;
+
 
     return 0;
 }
