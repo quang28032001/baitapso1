@@ -15,7 +15,8 @@ int main()
     s=(int)s;
 
     cout<<s/100;
-
-
+int abc;
+cout<<aa;
+cout<<aaa;
     return 0;
 }
