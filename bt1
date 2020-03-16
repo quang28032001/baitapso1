@@ -15,9 +15,7 @@ int main()
     s=(int)s;
 
     cout<<s/100;
-int agfj;
-cout<<fdf;
-cout<<fff;
+
 
     return 0;
 }
