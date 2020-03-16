@@ -15,9 +15,6 @@ int main()
     s=(int)s;
 
     cout<<s/100;
-    int agg;
-cout<<avvv;
-
 
     return 0;
 }
