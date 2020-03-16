@@ -16,7 +16,7 @@ int main()
 
     cout<<s/100;
 
-
+cout<< ab;
 
     return 0;
 }
