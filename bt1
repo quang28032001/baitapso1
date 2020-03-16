@@ -54,9 +54,8 @@ int main()
     s=(int)s;
 
     cout<<s/100;
-int bb;
-cout<< cc
-cout<< ab;
-
+int abc;
+cout<<aa;
+cout<<aaa;
     return 0;
 }
