@@ -3,6 +3,45 @@ vd1
 #include<math.h>
 using namespace std;
 float a,b,c,p,s;
+struct Date {
+	int day = 1;
+	int month = 1;
+	int year = 1902;
+};
+
+istream& operator >> (istream& InDevice, Date* date) {
+	int dd, mm, yy;
+	InDevice >> dd >> mm >> yy;
+	date->day = dd;
+	date->month = mm;
+	date->year = yy;
+	return InDevice;
+}
+
+ostream & operator << (ostream & OutDevice, Date date) {
+	int dd = date.day;
+	int mm = date.month;
+	int yy = date.year;
+	OutDevice << dd << "/" << mm << "/" << yy;
+	return OutDevice;
+}
+
+bool isValidDate(Date* date) {
+	int day = date->day;
+	int month = date->month;
+	int year = date->year;
+
+	if (year < 0)
+		return false;
+	if ((month > 12) || (month < 0))
+		return 0;
+	if (isLeapYear(year) && month == 2 && day <= 29 && day >= 1)
+		return true;
+	if (day <1 || day > day_of_month[month])
+		return false;
+	return true;
+}
+
 
 int x=(int)s;
 int main()
